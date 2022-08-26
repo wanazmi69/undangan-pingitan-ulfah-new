@@ -1,0 +1,49 @@
+<div class="flex flex-col justify-center items-center text-white">
+    <span class="text-4xl pb-10 font-[Satisfy]">Ucapan.....</span>
+    <div id="pesanku" class="w-full space-y-7 p-5  overflow-scroll rounded-lg  bg-slate-600 shadow-lg  max-w-xs max-h-96">
+        {% for mypesan in pesan reversed %}
+
+        <div
+            class="flex flex-col space-y-3 border-2 rounded-lg text-xs   max-w-xs p-3 text-white
+            {% if forloop.counter0|divisibleby:2 == 0 %}
+                mr-7
+            {%else%}
+                ml-7
+            {% endif %}
+            ">
+            <div class="border-b-2 pb-2">
+                <span class="font-semibold">
+                    @{{mypesan.nama}}
+                </span>
+                <span>
+                    di {{mypesan.alamat}}
+                </span>
+            </div>
+            <span>
+                {{mypesan.pesan}}
+            </span>
+        </div>
+        {% endfor %}
+        <!--  -->
+    </div>
+
+    <form action="/" method="POST"
+        class="flex flex-col justify-center items-center pt-20 p-10 text-gray-300 w-full space-y-5">
+    {% csrf_token %}
+        <div class="flex flex-col space-y-2 w-full">
+            <Input type="text" name="Nama" required="false" class="rounded-md text-xs bg-slate-600 p-3 text-gray-200" placeholder="Nama"></Input>
+        </div>
+        <div class="flex flex-col space-y-2 w-full">
+            <Input type="text" name="Alamat" required="false" class="rounded-md text-xs bg-slate-600 p-3 text-gray-200"
+                placeholder="Alamat Singkat"></Input>
+        </div>
+        <div class="flex flex-col space-y-2 w-full">
+            <textarea type="" name="Pesan" required="false" class="rounded-md text-xs h-28 bg-slate-600 p-3 text-gray-200"
+                placeholder="pesanmu"></textarea>
+        </div>
+        <button type="submit" class="text-gray-700 text-xs font-[Poppins] w-full bg-red-200 p-3 rounded-md">Kirim
+            Ucapan</button>
+
+    </form>
+
+</div>
