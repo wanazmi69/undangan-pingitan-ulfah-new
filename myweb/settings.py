@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 from pathlib import Path
 import django_on_heroku
 
+import os
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -21,15 +23,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-r22w7lq7a$3=$c2u)y4a85nwcqxe5yc=1_uztgg0+yo91h(hxk'
+SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-r22w7lq7a$3=$c2u)y4a85nwcqxe5yc=1_uztgg0+yo91h(hxk')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get('DEBUG', 'False') == 'False',
 
-ALLOWED_HOSTS = []
-INTERNAL_IPS = [
-    "127.0.0.1",
-]
+ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '127.0.0.1,localhost').split(',')
+INTERNAL_IPS = os.environ.get('INTERNAL_IPS','127.0.0.1')
+
 
 
 # Application definition

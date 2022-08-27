@@ -1,0 +1,123 @@
+{
+  "datalink": [
+    {
+      "img": "/static/icons/paket.png",
+      "judul": "Daftar Paket",
+      "link": "/admin/daftar-paket/",
+      "title": "3"
+    },
+    {
+      "img": "/static/icons/galery.png",
+      "judul": "Galery",
+      "link": "/admin/galery/",
+      "title": "10"
+    },
+    {
+      "img": "/static/icons/fasilitas.png",
+      "judul": "Fasilitas",
+      "link": "/admin/fasilitas/",
+      "title": "6"
+    },
+    {
+      "img": "/static/icons/peraturan.png",
+      "judul": "Peraturan",
+      "link": "/admin/peraturan/",
+      "title": "7"
+    },
+    {
+      "img": "/static/icons/listkontak.png",
+      "judul": "List Kontak",
+      "link": "/admin/kontak/",
+      "title": "2"
+    },
+    {
+      "img": "/static/icons/pembayaran.png",
+      "judul": "Pembayaran",
+      "link": "/admin/pembayaran/",
+      "title": "3"
+    }
+  ],
+  "datapaket": {
+    "jenispaket": [
+      "Normal",
+      "Promo"
+    ],
+    "namapaket": [
+      {
+        "harga": "600000",
+        "hargapromo": "33",
+        "idname": "bulan1",
+        "jenispaket": "Promo",
+        "listpaket": {
+          "-N9bUle6-16wHLHs0wjN": "tes123",
+          "-N9bUoYKTApGPvQW-L42": "tes1234567",
+          "-N9bY5ozVOQaYD5SVZPF": "ress",
+          "-N9bY7wMwP1HyLarEqk3": "tesssssss",
+          "-N9bYCePf5UCmwmo5h6C": "tesssssss",
+          "-N9begx5nK6c7tKBIfpT": "tamabh",
+          "-N9br8iPIA_pPA1APAsY": "jdhdhd",
+          "-NA-6nu0GDDghvcsO_no": "tes post",
+          "-NA-7KSWR08Wk6NIUdR1": "tes post",
+          "-NA-7N4sNAcMOnl-gGHv": "tes post lagi",
+          "-NA-7QTKi9uTi88ou3qS": "tes post lagi kune",
+          "-NA-_0tn9YXBGU7grqWW": "teskune",
+          "-NA-_6ve3IlSvXJws8jB": "teskune",
+          "-NA-_9doDn2VZ3OaSQuw": "tes lagi kune"
+        },
+        "nama": "Bulan"
+      },
+      {
+        "harga": "300000",
+        "hargapromo": "",
+        "idname": "minggu1",
+        "jenispaket": "Promo",
+        "listpaket": {
+          "-N9af9Q7wKxgjzDsKvq5": "tes6",
+          "-N9af9QOJde21gX0xi6L": "ffff",
+          "-N9afBTDEdPWZ-7kYe6q": "ddddd",
+          "-N9afFeqy8WJVfqPBdwR": "tes minggu",
+          "-N9ai2JPB5Db1NUBfoP8": "minggu",
+          "-N9ajH5RjamY6g0ToDln": "tes def minggu",
+          "-N9ajsK1QdaDCFrayiph": "tes minggu",
+          "-NA-7TrrmuVThIGY2lNB": "tes post di minggu",
+          "-NA-7Zm5L6dwjB2Yfsi8": "tes post di minggu",
+          "-NA-7bJg8mQAhZReDops": "post minggu"
+        },
+        "nama": "Minggu",
+        "status": true
+      },
+      {
+        "harga": "6000000",
+        "hargapromo": "5500000",
+        "idname": "tahun1",
+        "jenispaket": "Promo",
+        "listpaket": {
+          "-N9af9S6sWcRfCjMPyLy": "tes6",
+          "-N9af9SiUi4N8ewqQ7wc": "ffff",
+          "-N9afBVHbhL-rLDMX-zx": "ddddd",
+          "-N9afFgo5TFRcvEZLTgN": "tes minggu",
+          "-N9aiAso7CBXUh9HiuwT": "tahun",
+          "-N9aiakvGlUnFvYPCLup": "tahun",
+          "-N9ajK_scQbLBZtGvrIp": "tes def tahun",
+          "-N9ajnvpj0SYXwn89J4w": "tes def tahun",
+          "-N9ajubJvzzWiK9izJcD": "tes tahun",
+          "-N9aotSflRk4QTC-rLxN": "tes tahun",
+          "-N9apESdlENPQjLDXNT3": "tes tahun",
+          "-N9apFVnOgW3xXOYcN-J": "tes tahun",
+          "-N9apaZrl2MFTlPpvbW0": "tes tahun",
+          "-N9apeeyX6Uy5ho4x6l7": "tes tahun",
+          "-N9apgsawMVYz3QnMAXh": "tes tahun",
+          "-N9apm6daa7h5fHFLZga": "tes tahun",
+          "-N9appQZSfPAmZe5bGH9": "tes tahun",
+          "-N9aqAnsGyahUBo7mZHL": "tes tahun",
+          "-N9aqFpXBb6qqEvAFT1j": "tes tahun",
+          "-N9aqKF0ng2kagKHXn93": "tes tahun",
+          "-N9bdqAMAvupelD2b_0G": "ee",
+          "-N9btIKrf28VbVCbcT1D": "free wifi"
+        },
+        "nama": "Tahun",
+        "status": true
+      }
+    ]
+  }
+}
