@@ -64,7 +64,8 @@
     Howler.autoUnlock = false;
     let sound = new Howl({
         src: ['https://cdn.pixabay.com/download/audio/2022/03/23/audio_4ce5f46cbd.mp3?filename=nature-99499.mp3'],
-        // autoplay: true,
+        autoplay: true,
+        html5: true,
         onplayerror: function () {
             sound.once('unlock', function () {
                 sound.play();
