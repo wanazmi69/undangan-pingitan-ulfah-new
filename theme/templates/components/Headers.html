@@ -3,17 +3,17 @@
     @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap');
 </style>
 <div id="particles-js" class="relative flex justify-center items-center w-full h-screen">
-    <!-- <div class="fixed top-10 right-5 text-white">
+    <div class="fixed top-10 right-5 text-white">
 
-        <audio id="play" autoplay >
-            <source src="{% static 'music/sounds.mp3' %}">
-        </audio>
+        <!-- <audio id="play" autoplay >
+            <source src="https://cdn.pixabay.com/download/audio/2022/03/23/audio_4ce5f46cbd.mp3?filename=nature-99499.mp3'">
+        </audio> -->
 
         <button class="w-10" onclick="playAudio()" type="button">
             <img class="w-10" src="{% static 'img/music.png' %}" alt="">
         </button>
 
-    </div> -->
+    </div>
     <div class="absolute flex items-center top-0 flex-col  pt-10 text-white font-[Dosis] tracking-widest">
         <span class="text-lg font-[Dosis] tracking-widest">UNDANGAN PINGITAN</span>
         <span>(Karia)</span>
@@ -57,39 +57,49 @@
 
 <script src="{% static 'js/particles.js' %}"></script>
 <script src="{% static 'js/app.js' %}"></script>
-
-<!-- <script>
-    let audio = document.getElementById("play");
+<script src="{% static 'js/howler.min.js' %}"></script>
+<script>
     let status = false
     let scrolku = 0
-    audio.play()
-    audio.load()
+    Howler.autoUnlock = false;
+    let sound = new Howl({
+        src: ['https://cdn.pixabay.com/download/audio/2022/03/23/audio_4ce5f46cbd.mp3?filename=nature-99499.mp3'],
+        // autoplay: true,
+        onplayerror: function () {
+            sound.once('unlock', function () {
+                sound.play();
+            });
+        }
+    });
 
     window.onscroll = function () { myFunction() };
 
-    function myFunction() {
-        if(scrolku == 0){
-            console.log("tess")
-            audio.play()
-            scrolku = 1
+    // function myFunction() {
+    //     if (document.documentElement.scrollTop > 50) {
+    //         if (scrolku == 0) {
 
-        }
-}
+    //             sound.play()
+    //             console.log("tes;og")
+    //             scrolku = 1
+
+    //         }
+    //     }
+    // }
 
     let playAudio = () => {
         if (status == false) {
-            audio.play()
+            sound.play();
             status = true
         } else {
-            audio.pause()
+            Howler.autoUnlock = true;
+            sound.pause()
             status = false
 
         }
     }
 
 
+    sound.play();
 
 
-
-
-</script> -->
+</script>
