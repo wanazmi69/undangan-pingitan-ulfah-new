@@ -3,13 +3,11 @@
     @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap');
 </style>
 <div id="particles-js" class="relative flex justify-center items-center w-full h-screen">
-    <div class="fixed z-50 bottom-10 right-5 text-white">
 
-        <button class="w-10" onclick="playAudio()" type="button">
-            <img class="w-10" src="{% static 'img/music.png' %}" alt="">
-        </button>
+    <button id="btm" class="w-14 h-14 fixed flex justify-center items-center z-50 bottom-10 right-5" onclick="playAudio()" type="button">
+        <img for="btm" class="w-10" src="{% static 'img/music.png' %}" alt="">
+    </button>
 
-    </div>
     <div class="absolute flex items-center top-0 flex-col  pt-10 text-white font-[Dosis] tracking-widest">
         <span class="text-lg font-[Dosis] tracking-widest">UNDANGAN PINGITAN</span>
         <span>(Karia)</span>
@@ -41,9 +39,6 @@
                 13:00 - Selesai
             </span>
         </div>
-        <!-- <a href="#buka" class="mt-10 text-xs border-2 p-2 rounded-lg">
-            <span>Bukan Undangan</span>
-        </a> -->
     </div>
 
 
@@ -78,14 +73,14 @@
         } else {
             
             sound.play();
-            Howler.volume(0.5);
+            Howler.volume(0.2);
             status = false
         }
     }
 
 
     sound.play();
-    Howler.volume(0.5);
+    Howler.volume(0.2);
 
 
 </script>
