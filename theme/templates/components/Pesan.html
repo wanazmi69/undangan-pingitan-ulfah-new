@@ -28,7 +28,7 @@
     </div>
 
     <form action="/" method="POST"
-        class="flex flex-col justify-center items-center pt-20 p-10 text-gray-300 w-full space-y-5">
+        class="flex flex-col justify-center items-center pt-20 p-10 text-gray-300 w-full md:max-w-md space-y-5">
     {% csrf_token %}
         <div class="flex flex-col space-y-2 w-full">
             <Input type="text" name="Nama" required="false" class="rounded-md text-xs bg-slate-600 p-3 text-gray-200" placeholder="Nama"></Input>

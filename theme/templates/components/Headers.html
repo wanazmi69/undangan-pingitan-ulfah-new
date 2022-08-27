@@ -3,6 +3,17 @@
     @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap');
 </style>
 <div id="particles-js" class="relative flex justify-center items-center w-full h-screen">
+    <div class="fixed top-10 right-5 text-white">
+
+        <audio id="play" autoplay >
+            <source src="{% static 'music/sounds.mp3' %}">
+        </audio>
+
+        <button class="w-10" onclick="playAudio()" type="button">
+            <img class="w-10" src="{% static 'img/music.png' %}" alt="">
+        </button>
+
+    </div>
     <div class="absolute flex items-center top-0 flex-col  pt-10 text-white font-[Dosis] tracking-widest">
         <span class="text-lg font-[Dosis] tracking-widest">UNDANGAN PINGITAN</span>
         <span>(Karia)</span>
@@ -10,7 +21,7 @@
 
 
     </div>
-   
+
     <div class="absolute flex flex-col justify-center items-center text-sm tracking-widest  text-white">
         <div class="flex py-5 ">
             <span>Sabtu & Senin</span>
@@ -44,7 +55,41 @@
 </div>
 
 
-
-
 <script src="{% static 'js/particles.js' %}"></script>
 <script src="{% static 'js/app.js' %}"></script>
+
+<script>
+    let audio = document.getElementById("play");
+    let status = false
+    let scrolku = 0
+    audio.play()
+    audio.load()
+
+    window.onscroll = function () { myFunction() };
+
+    function myFunction() {
+        if(scrolku == 0){
+            console.log("tess")
+            audio.play()
+            scrolku = 1
+
+        }
+}
+
+    let playAudio = () => {
+        if (status == false) {
+            audio.play()
+            status = true
+        } else {
+            audio.pause()
+            status = false
+
+        }
+    }
+
+
+
+
+
+
+</script>
