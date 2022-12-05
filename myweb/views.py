@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponseRedirect
 
 
-from mypesan.models import Post
+# from mypesan.models import Post
 
 
 def index(request):
