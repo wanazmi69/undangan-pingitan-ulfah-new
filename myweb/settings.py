@@ -121,8 +121,5 @@ if DEBUG:
     STATIC_DIR = os.path.join(BASE_DIR, 'static')
 else:
     STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
-STATICFILES_DIRS = [
-    BASE_DIR / "static",
-]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
