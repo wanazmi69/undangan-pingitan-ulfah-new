@@ -1,0 +1,86 @@
+{% load static %}
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap');
+</style>
+<div id="particles-js" class="relative flex justify-center items-center w-full h-screen">
+
+    <button id="btm" class="w-14 h-14 fixed flex justify-center items-center z-50 bottom-10 right-5" onclick="playAudio()" type="button">
+        <img for="btm" class="w-10" src="{% static 'img/music.png' %}" alt="">
+    </button>
+
+    <div class="absolute flex items-center top-0 flex-col  pt-10 text-white font-[Dosis] tracking-widest">
+        <span class="text-lg font-[Dosis] tracking-widest">UNDANGAN PINGITAN</span>
+        <span>(Karia)</span>
+
+
+
+    </div>
+
+    <div class="absolute flex flex-col justify-center items-center text-sm tracking-widest  text-white">
+        <div class="flex py-5 ">
+            <span>Sabtu & Senin</span>
+        </div>
+        <div class="flex flex-col items-center justify-center space-y-3">
+            <span class="border-y-2 py-2">
+                Tari Adat (Kafosampu)
+            </span>
+            <span>3 September 2022</span>
+            <span>
+                19:00 - Selesai
+            </span>
+        </div>
+
+        <div class="flex flex-col items-center justify-center pt-10 space-y-3">
+
+            <span class="border-y-2 p-2">Perjamuan</span>
+            <span>5 September 2022</span>
+
+            <span>
+                13:00 - Selesai
+            </span>
+        </div>
+    </div>
+
+
+
+</div>
+
+
+<script src="{% static 'js/particles.js' %}"></script>
+<script src="{% static 'js/app.js' %}"></script>
+<script src="{% static 'js/howler.min.js' %}"></script>
+<script>
+    let status = false
+    let scrolku = 0
+    let sound = new Howl({
+        src: ['https://cdn.pixabay.com/download/audio/2022/03/23/audio_4ce5f46cbd.mp3?filename=nature-99499.mp3'],
+        // autoplay: true,
+        html5: true,
+        onplayerror: function () {
+            sound.once('unlock', function () {
+                sound.play();
+            });
+        }
+        
+    });
+
+
+    let playAudio = () => {
+
+        if (status == false) {
+            sound.pause();
+            status = true
+        } else {
+            
+            sound.play();
+            Howler.volume(0.2);
+            status = false
+        }
+    }
+
+
+    sound.play();
+    Howler.volume(0.2);
+
+
+</script>
